@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{12C941A9-DB0C-4EDB-9056-A6669CDF70F2}</ProjectGuid>
+    <ProjectGuid>{30AB2111-7146-417F-8663-1BA75614F854}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EnglishWords.Facade</RootNamespace>
-    <AssemblyName>EnglishWords.Facade</AssemblyName>
+    <RootNamespace>EnglishWords.Graph</RootNamespace>
+    <AssemblyName>EnglishWords.Graph</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,19 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEnglishWordsStartup.cs" />
-    <Compile Include="Imple\EnglishWordsStartup.cs" />
+    <Compile Include="IGraphFactory.cs" />
+    <Compile Include="Imple\GraphFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EnglishWords.FileReader\EnglishWords.FileLibrary.csproj">
-      <Project>{1A896F31-3237-4A92-919B-064554ACF720}</Project>
-      <Name>EnglishWords.FileLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EnglishWords.GraphFactory\EnglishWords.Graph.csproj">
-      <Project>{30AB2111-7146-417F-8663-1BA75614F854}</Project>
-      <Name>EnglishWords.Graph</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

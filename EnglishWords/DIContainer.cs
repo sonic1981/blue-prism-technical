@@ -1,4 +1,10 @@
-﻿using NLog;
+﻿using EnglishWords.Facade;
+using EnglishWords.Facade.Imple;
+using EnglishWords.FileLibrary;
+using EnglishWords.FileLibrary.Imple;
+using EnglishWords.Graph;
+using EnglishWords.Graph.Imple;
+using NLog;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 using System;
@@ -28,6 +34,10 @@ namespace EnglishWords
         public virtual void RegisterTypes()
         {
             _container.Register<ILogger>(() => LogManager.GetLogger(""));
+
+            _container.Register<IEnglishWordsStartup, EnglishWordsStartup>();
+            _container.Register<IFileLoader, FileLoader>();
+            _container.Register<IGraphFactory, GraphFactory>();
         }
 
         public Container GetContainer()

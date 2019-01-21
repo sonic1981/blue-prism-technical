@@ -22,7 +22,13 @@ namespace EnglishWords
                     logger.Info("Starting....");
 
                     IEnglishWordsStartup startup = container.GetInstance<IEnglishWordsStartup>();
+#if DEBUG
+                    await startup.FindShortestPath(args[0],string.Empty, string.Empty, string.Empty);
+#endif
+#if !DEBUG
                     await startup.FindShortestPath(args[0], args[1], args[2], args[3]);
+
+#endif
 
                     logger.Info("Complete");
 
@@ -30,6 +36,7 @@ namespace EnglishWords
                 catch(Exception ex)
                 {
                     logger.Error(ex);
+                    Console.ReadLine();
                 }
             }
         }

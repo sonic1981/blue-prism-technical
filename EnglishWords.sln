@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords", "EnglishWords\EnglishWords.csproj", "{780DAEA1-816F-435B-A686-13F5EECA88EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.FileReader", "EnglishWords.FileReader\EnglishWords.FileReader.csproj", "{1A896F31-3237-4A92-919B-064554ACF720}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.FileLibrary", "EnglishWords.FileReader\EnglishWords.FileLibrary.csproj", "{1A896F31-3237-4A92-919B-064554ACF720}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.Test", "EnglishWords.Test\EnglishWords.Test.csproj", "{8EDF4429-251A-416D-BB68-93F227191BCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.Facade", "EnglishWords.Facade\EnglishWords.Facade.csproj", "{12C941A9-DB0C-4EDB-9056-A6669CDF70F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.Graph", "EnglishWords.GraphFactory\EnglishWords.Graph.csproj", "{30AB2111-7146-417F-8663-1BA75614F854}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{12C941A9-DB0C-4EDB-9056-A6669CDF70F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12C941A9-DB0C-4EDB-9056-A6669CDF70F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12C941A9-DB0C-4EDB-9056-A6669CDF70F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30AB2111-7146-417F-8663-1BA75614F854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30AB2111-7146-417F-8663-1BA75614F854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30AB2111-7146-417F-8663-1BA75614F854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30AB2111-7146-417F-8663-1BA75614F854}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

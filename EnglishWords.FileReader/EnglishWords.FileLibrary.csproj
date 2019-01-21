@@ -7,8 +7,8 @@
     <ProjectGuid>{1A896F31-3237-4A92-919B-064554ACF720}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EnglishWords.FileReader</RootNamespace>
-    <AssemblyName>EnglishWords.FileReader</AssemblyName>
+    <RootNamespace>EnglishWords.FileLibrary</RootNamespace>
+    <AssemblyName>EnglishWords.FileLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IFileLoader.cs" />
+    <Compile Include="Imple\FileLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -73,9 +73,13 @@
       <Project>{12C941A9-DB0C-4EDB-9056-A6669CDF70F2}</Project>
       <Name>EnglishWords.Facade</Name>
     </ProjectReference>
-    <ProjectReference Include="..\EnglishWords.FileReader\EnglishWords.FileReader.csproj">
+    <ProjectReference Include="..\EnglishWords.FileReader\EnglishWords.FileLibrary.csproj">
       <Project>{1a896f31-3237-4a92-919b-064554acf720}</Project>
-      <Name>EnglishWords.FileReader</Name>
+      <Name>EnglishWords.FileLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EnglishWords.GraphFactory\EnglishWords.Graph.csproj">
+      <Project>{30AB2111-7146-417F-8663-1BA75614F854}</Project>
+      <Name>EnglishWords.Graph</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
