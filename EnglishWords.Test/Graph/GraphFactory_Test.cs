@@ -41,5 +41,24 @@ namespace EnglishWords.Test.Graph
             Assert.IsFalse(factory.IsOneCharacterDifferent("agnew", "adasddsfsdfsf"));
             Assert.IsTrue(factory.IsOneCharacterDifferent("agnes", "agne"));
         }
+
+        [Test]
+        public void IncorrectResultsReturned()
+        {
+            GraphFactory factory = new GraphFactory();
+            List<string> input = new List<string>()
+            {
+                "supernatant",
+                "s",
+                "super"
+            };
+            ConcurrentDictionary<string, List<string>> result = factory.BuildGraph(input);
+
+            Assert.AreEqual(3, result.Count());
+            List<string> edges;
+            Assert.IsTrue(result.TryGetValue("supernatant", out edges));
+            Assert.IsFalse(edges.Any());
+        }
+
     }
 }

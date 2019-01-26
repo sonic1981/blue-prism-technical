@@ -22,30 +22,33 @@ namespace EnglishWords.Graph.Imple
 
         public bool IsOneCharacterDifferent(string str1, string str2)
         {
+            //ignore duplicates
+            if (str1 == str2)
+                return false;
             int stringLengthDifference = str1.Length - str2.Length;
             //throw too large length difference first
-            if (stringLengthDifference > 1 && stringLengthDifference < -1)
+            if (stringLengthDifference > 1 || stringLengthDifference < -1)
                 return false;
 
             char[] char1 = str1.ToCharArray();
             char[] char2 = str2.ToCharArray();
 
             int differenceCount = 0;
-            for(int cPos = 0; cPos < char1.Length && cPos < char2.Length;  cPos++)
+            for (int cPos = 0; cPos < char1.Length && cPos < char2.Length; cPos++)
             {
                 if (char1[cPos] != char2[cPos])
                     differenceCount++;
 
                 if (differenceCount > 1)
                     return false;
-                
+
             }
 
             if (stringLengthDifference == 0)
                 return differenceCount == 1;
             else
                 return differenceCount == 0;
-
+            
 
         }
 
