@@ -9,6 +9,6 @@ namespace EnglishWords.Interfaces
 {
     public interface IShortestPathAlgorithm
     {
-        IEnumerable<string> FindShortestPath(ConcurrentDictionary<string, List<string>> graph, string startNode, string endNode);
+        bool TryFindShortestPath(IDictionary<string, List<string>> graph, string startNode, string endNode, out IEnumerable<string> criticalPath);
     }
 }

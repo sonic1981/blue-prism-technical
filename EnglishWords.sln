@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.Graph", "Engli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.Interfaces", "EnglishWords.Interfaces\EnglishWords.Interfaces.csproj", "{5840EF94-8027-4129-95A9-3B8BFD452078}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWord.BreadthFirst", "EnglishWord.Dijkstra\EnglishWord.BreadthFirst.csproj", "{20C975FB-368C-4ED5-98F6-3239FF6D26BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{5840EF94-8027-4129-95A9-3B8BFD452078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5840EF94-8027-4129-95A9-3B8BFD452078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5840EF94-8027-4129-95A9-3B8BFD452078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C975FB-368C-4ED5-98F6-3239FF6D26BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C975FB-368C-4ED5-98F6-3239FF6D26BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C975FB-368C-4ED5-98F6-3239FF6D26BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C975FB-368C-4ED5-98F6-3239FF6D26BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

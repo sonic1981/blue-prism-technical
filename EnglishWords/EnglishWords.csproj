@@ -69,6 +69,10 @@
     <Content Include="words-english.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EnglishWord.Dijkstra\EnglishWord.BreadthFirst.csproj">
+      <Project>{20c975fb-368c-4ed5-98f6-3239ff6d26be}</Project>
+      <Name>EnglishWord.BreadthFirst</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EnglishWords.Facade\EnglishWords.Facade.csproj">
       <Project>{12C941A9-DB0C-4EDB-9056-A6669CDF70F2}</Project>
       <Name>EnglishWords.Facade</Name>
