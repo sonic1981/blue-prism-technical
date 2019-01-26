@@ -1,4 +1,5 @@
-﻿using EnglishWords.Facade;
+﻿using EnglishWord.Dijkstra;
+using EnglishWords.Facade;
 using EnglishWords.Facade.Imple;
 using EnglishWords.FileLibrary;
 using EnglishWords.Graph;
@@ -37,6 +38,7 @@ namespace EnglishWords
             _container.Register<IEnglishWordsStartup, EnglishWordsStartup>();
             _container.Register<IFileLoader, FileLoader>();
             _container.Register<IGraphFactory, GraphFactory>();
+            _container.Register<IShortestPathAlgorithm, ShortestPathAlgorithm>();
         }
 
         public Container GetContainer()

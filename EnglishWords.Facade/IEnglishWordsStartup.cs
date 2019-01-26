@@ -8,6 +8,6 @@ namespace EnglishWords.Facade
 {
     public interface IEnglishWordsStartup
     {
-        Task FindShortestPath(string filePath, string startWord, string endWord, string resultFilePath);
+        void FindShortestPath(string filePath, string startWord, string endWord, string resultFilePath);
     }
 }
