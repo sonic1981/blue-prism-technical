@@ -81,6 +81,10 @@
       <Project>{30AB2111-7146-417F-8663-1BA75614F854}</Project>
       <Name>EnglishWords.Graph</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EnglishWords.Interfaces\EnglishWords.Interfaces.csproj">
+      <Project>{5840ef94-8027-4129-95a9-3b8bfd452078}</Project>
+      <Name>EnglishWords.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

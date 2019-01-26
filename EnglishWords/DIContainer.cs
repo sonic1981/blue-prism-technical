@@ -1,9 +1,8 @@
 ﻿using EnglishWords.Facade;
 using EnglishWords.Facade.Imple;
 using EnglishWords.FileLibrary;
-using EnglishWords.FileLibrary.Imple;
 using EnglishWords.Graph;
-using EnglishWords.Graph.Imple;
+using EnglishWords.Interfaces;
 using NLog;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;

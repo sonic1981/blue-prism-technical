@@ -48,12 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IFileLoader.cs" />
-    <Compile Include="Imple\FileLoader.cs" />
+    <Compile Include="FileLoader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EnglishWords.Interfaces\EnglishWords.Interfaces.csproj">
+      <Project>{5840ef94-8027-4129-95a9-3b8bfd452078}</Project>
+      <Name>EnglishWords.Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

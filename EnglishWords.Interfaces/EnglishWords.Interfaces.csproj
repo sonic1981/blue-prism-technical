@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{12C941A9-DB0C-4EDB-9056-A6669CDF70F2}</ProjectGuid>
+    <ProjectGuid>{5840EF94-8027-4129-95A9-3B8BFD452078}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EnglishWords.Facade</RootNamespace>
-    <AssemblyName>EnglishWords.Facade</AssemblyName>
+    <RootNamespace>EnglishWords.Interfaces</RootNamespace>
+    <AssemblyName>EnglishWords.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,16 +31,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.5.11\lib\net45\NLog.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.IO.Compression" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,26 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IEnglishWordsStartup.cs" />
-    <Compile Include="Imple\EnglishWordsStartup.cs" />
+    <Compile Include="IFileLoader.cs" />
+    <Compile Include="IGraphFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EnglishWords.FileReader\EnglishWords.FileLibrary.csproj">
-      <Project>{1A896F31-3237-4A92-919B-064554ACF720}</Project>
-      <Name>EnglishWords.FileLibrary</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EnglishWords.GraphFactory\EnglishWords.Graph.csproj">
-      <Project>{30AB2111-7146-417F-8663-1BA75614F854}</Project>
-      <Name>EnglishWords.Graph</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EnglishWords.Interfaces\EnglishWords.Interfaces.csproj">
-      <Project>{5840EF94-8027-4129-95A9-3B8BFD452078}</Project>
-      <Name>EnglishWords.Interfaces</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

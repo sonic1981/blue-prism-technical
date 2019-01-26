@@ -1,5 +1,6 @@
 ﻿using EnglishWords.FileLibrary;
 using EnglishWords.Graph;
+using EnglishWords.Interfaces;
 using NLog;
 using System;
 using System.Collections.Concurrent;
