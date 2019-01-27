@@ -44,8 +44,19 @@ namespace EnglishWords.Facade.Imple
             int numberOfMatching = graph.Count(c => c.Value.Any());
             _logger.Info($"system has found {numberOfMatching} dead end nodes of {graph.Count()}");
 
-            //_shortestPathAlgorithm.FindShortestPath(graph, startWord, endWord);
-            throw new NotImplementedException();
+            _logger.Info("Trying to calculate critical path...");
+            List<string> criticalPath;
+            if (_shortestPathAlgorithm.TryFindShortestPath(graph, startWord, endWord, out criticalPath))
+            {
+                _logger.Info("Critical path found");
+                _logger.Info($"Critical path is: {string.Join(" -> ", criticalPath)}");
+
+                _logger.Info("Saving file...");
+                _fileLoader.SaveFile(criticalPath, resultFilePath);
+                _logger.Info("Save complete");
+            }
+            else
+                _logger.Error($"Failed to find a path between {startWord} and {endWord}");
         }
     }
 }

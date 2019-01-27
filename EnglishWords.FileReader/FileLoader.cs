@@ -12,9 +12,29 @@ namespace EnglishWords.FileLibrary
     {
         public IEnumerable<string> LoadFile(string fileName)
         {
-            return File.ReadAllLines(fileName);
+            try
+            {
+                return File.ReadAllLines(fileName);
+            }
+            catch(Exception ex)
+            {
+                throw new ApplicationException($"Failed to read file {fileName}", ex);
+            }
         }
 
+        public void SaveFile(IEnumerable<string> criticalPath, string fileName)
+        {
+            try
+            {
+                if (File.Exists(fileName))
+                    File.Delete(fileName);
 
+                File.WriteAllLines(fileName, criticalPath);
+            }
+            catch(Exception ex)
+            {
+                throw new ApplicationException($"Failed to write to file {fileName}", ex);
+            }
+        }
     }
 }

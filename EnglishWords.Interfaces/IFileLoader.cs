@@ -9,5 +9,6 @@ namespace EnglishWords.Interfaces
     public interface IFileLoader
     {
         IEnumerable<string> LoadFile(string fileName);
+        void SaveFile(IEnumerable<string> criticalPath, string fileName);
     }
 }
