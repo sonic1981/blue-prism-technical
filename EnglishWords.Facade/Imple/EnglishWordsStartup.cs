@@ -44,7 +44,8 @@ namespace EnglishWords.Facade.Imple
             int numberOfMatching = graph.Count(c => c.Value.Any());
             _logger.Info($"system has found {numberOfMatching} dead end nodes of {graph.Count()}");
 
-            _shortestPathAlgorithm.FindShortestPath(graph, startWord, endWord);
+            //_shortestPathAlgorithm.FindShortestPath(graph, startWord, endWord);
+            throw new NotImplementedException();
         }
     }
 }

@@ -73,9 +73,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EnglishWord.Dijkstra\EnglishWord.BreadthFirst.csproj">
+    <ProjectReference Include="..\EnglishWord.Dijkstra\EnglishWord.Dijkstra.csproj">
       <Project>{20C975FB-368C-4ED5-98F6-3239FF6D26BE}</Project>
-      <Name>EnglishWord.BreadthFirst</Name>
+      <Name>EnglishWord.Dijkstra</Name>
     </ProjectReference>
     <ProjectReference Include="..\EnglishWords.GraphFactory\EnglishWords.Graph.csproj">
       <Project>{30ab2111-7146-417f-8663-1ba75614f854}</Project>

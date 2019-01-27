@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.Graph", "Engli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWords.Interfaces", "EnglishWords.Interfaces\EnglishWords.Interfaces.csproj", "{5840EF94-8027-4129-95A9-3B8BFD452078}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWord.BreadthFirst", "EnglishWord.Dijkstra\EnglishWord.BreadthFirst.csproj", "{20C975FB-368C-4ED5-98F6-3239FF6D26BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishWord.Dijkstra", "EnglishWord.Dijkstra\EnglishWord.Dijkstra.csproj", "{20C975FB-368C-4ED5-98F6-3239FF6D26BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
