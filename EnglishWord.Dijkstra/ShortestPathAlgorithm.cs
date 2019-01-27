@@ -10,11 +10,12 @@ namespace EnglishWord.Dijkstra
 {
     public class ShortestPathAlgorithm : IShortestPathAlgorithm
     {
-        public bool TryFindShortestPath(IDictionary<string, List<string>> graph, string startNode, string endNode, out IEnumerable<string> criticalPath)
+        public bool TryFindShortestPath(IDictionary<string, List<string>> graph, string startNode, string endNode, out List<string> criticalPath)
         {
             //node queue for next objects
             Queue<string> nextNodeQueue = new Queue<string>();
 
+            //backwards facing edges
             Dictionary<string, List<string>> visitedEdges = new Dictionary<string, List<string>>();
 
             nextNodeQueue.Enqueue(startNode);
@@ -67,9 +68,7 @@ namespace EnglishWord.Dijkstra
                
             }
 
-            criticalPath = buildCriticalPath(startNode, endNode, visitedEdges, visitedSet);
-
-            return true;
+            return tryBuildCriticalPath(startNode, endNode, visitedEdges, visitedSet, out criticalPath);
         }
 
         private static void addVisitedEdge(Dictionary<string, List<string>> visitedEdges, string currentNode, string e)
@@ -82,10 +81,16 @@ namespace EnglishWord.Dijkstra
             }
         }
 
-        private static IEnumerable<string> buildCriticalPath(string startNode, string endNode, Dictionary<string, List<string>> visitedEdges, Dictionary<string, int> visitedSet)
+        /// <summary>
+        /// Work backwards from the end node finding all the visited edges of a lower weight, this returns our critical path
+        /// </summary>
+        private static bool tryBuildCriticalPath(string startNode, string endNode, Dictionary<string, List<string>> visitedEdges, Dictionary<string, int> visitedSet, out List<string> criticalPath)
         {
-            List<string> criticalPath = new List<string>();
+            criticalPath = new List<string>();
             string currentNode = endNode;
+            if (visitedSet.ContainsKey(endNode) == false)
+                return false;
+
             int currentWeight = visitedSet[endNode];
             while (currentNode != startNode)
             {
@@ -104,7 +109,7 @@ namespace EnglishWord.Dijkstra
             criticalPath.Add(startNode);
             criticalPath.Reverse();
 
-            return criticalPath;
+            return true;
         }
 
     }
